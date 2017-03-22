@@ -20,8 +20,6 @@
 		7FF072BB1E71F0DC000E03EA /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF072BA1E71F0DC000E03EA /* EmployeeTableViewController.swift */; };
 		7FF072BC1E71F0DC000E03EA /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF072BA1E71F0DC000E03EA /* EmployeeTableViewController.swift */; };
 		7FF072BE1E71F0FC000E03EA /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF072BA1E71F0DC000E03EA /* EmployeeTableViewController.swift */; };
-		7FF072EC1E82DB18000E03EA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF072EB1E82DB18000E03EA /* BaseView.swift */; };
-		7FF072EE1E82E0D2000E03EA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF072ED1E82E0D2000E03EA /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +58,6 @@
 		7FA024521E6E105700FAE2AD /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7FA024531E6E105700FAE2AD /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		7FF072BA1E71F0DC000E03EA /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
-		7FF072EB1E82DB18000E03EA /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		7FF072ED1E82E0D2000E03EA /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +143,6 @@
 			children = (
 				7FA024521E6E105700FAE2AD /* CardView.swift */,
 				7FA024531E6E105700FAE2AD /* CardView.xib */,
-				7FF072EB1E82DB18000E03EA /* BaseView.swift */,
-				7FF072ED1E82E0D2000E03EA /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,9 +296,7 @@
 				7FA024511E6E0FC800FAE2AD /* ViewController.swift in Sources */,
 				7FA024501E6E0FC800FAE2AD /* AppDelegate.swift in Sources */,
 				7FA024541E6E105700FAE2AD /* CardView.swift in Sources */,
-				7FF072EC1E82DB18000E03EA /* BaseView.swift in Sources */,
 				7FF072BB1E71F0DC000E03EA /* EmployeeTableViewController.swift in Sources */,
-				7FF072EE1E82E0D2000E03EA /* LoadingView.swift in Sources */,
 				7FA024231E6E0F0C00FAE2AD /* Scrollview3PageTutorial.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

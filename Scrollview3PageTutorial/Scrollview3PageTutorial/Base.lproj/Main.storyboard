@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BaseView" customModule="Scrollview3PageTutorial" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -28,7 +28,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8J-DI-bdV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7F-Rr-mOC">
+                                <rect key="frame" x="16" y="93" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKv-2z-0Wz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4B-s5-UiQ">
+                                <rect key="frame" x="16" y="461" width="343" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="bottomButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6VS-Ev-34y"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8J-DI-bdV" customClass="BaseScrollView" customModule="Scrollview3PageTutorial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-vN-usC">
@@ -63,11 +77,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g7F-Rr-mOC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Ig-PQ-lgN"/>
                             <constraint firstItem="tnv-kP-x5Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1dC-EE-dNz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o4B-s5-UiQ" secondAttribute="bottom" constant="176" id="3Ju-aj-qcV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z8J-DI-bdV" secondAttribute="trailing" constant="-16" id="6h4-Qu-n4N"/>
                             <constraint firstItem="Z8J-DI-bdV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="D3S-dH-gvl"/>
+                            <constraint firstItem="g7F-Rr-mOC" firstAttribute="top" secondItem="tnv-kP-x5Z" secondAttribute="bottom" constant="30" id="HnV-8R-QDZ"/>
+                            <constraint firstItem="o4B-s5-UiQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="NY6-dp-1Uq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tnv-kP-x5Z" secondAttribute="trailing" constant="-16" id="T2A-bS-6ZE"/>
+                            <constraint firstItem="g7F-Rr-mOC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WCT-es-oLV"/>
                             <constraint firstItem="tnv-kP-x5Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="aWR-0r-EVE"/>
+                            <constraint firstItem="o4B-s5-UiQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dOK-OL-ysj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z8J-DI-bdV" secondAttribute="bottom" id="ecp-Ec-E8N"/>
                             <constraint firstItem="Z8J-DI-bdV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="zlE-J1-jP5"/>
                         </constraints>
@@ -75,6 +95,7 @@
                     <connections>
                         <outlet property="scrollView" destination="GR4-Q6-Mbn" id="PAX-3J-Qzq"/>
                         <outlet property="streachableScrollView" destination="Z8J-DI-bdV" id="SFs-T0-Ehc"/>
+                        <outlet property="testButton" destination="g7F-Rr-mOC" id="Tz4-bf-aDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

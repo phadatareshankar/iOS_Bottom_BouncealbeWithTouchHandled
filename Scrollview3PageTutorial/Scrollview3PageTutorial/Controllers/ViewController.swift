@@ -12,8 +12,37 @@ enum PageOrder {
     case Current, Previous, Next
 }
 
+class BaseScrollView: UIScrollView {
+    
+    /*
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        
+        let view = self.subviews[0];
+        
+        let subScrollview = view.subviews[0];
+        
+        let hitView = super.hitTest(point, with: event)
+        
+        if point.y>0 && point.y<subScrollview.frame.origin.y {
+            return nil
+        }
+        
+        return hitView
+        
+    }
+    
+}
+
 class ViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var testButton: UIButton!
     @IBOutlet weak var streachableScrollView: UIScrollView!
     @IBOutlet weak var scrollView: UIScrollView!
     var cardViewCurrent = CardView()
@@ -40,7 +69,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.streachableScrollView.layoutIfNeeded()
     }
     
+    @IBAction func clickedButton(_ sender: Any) {
+        
+        print("Clicked Button");
+    }
     
+    @IBAction func bottomButtonClicked(_ sender: Any) {
+        
+        print("Clicked Bottom Button");
+        
+    }
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
     {
         self.makeCardCenter()
